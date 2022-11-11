@@ -28,7 +28,7 @@ const Child2 = ({ inputValue }) => {
   return (
     <div>
       <h1>Child2</h1>
-      {inputValue.value1 && inputValue.value2 ?<p>{inputValue.value1}+</p>:""}
+      {inputValue.value1  ?<p>{inputValue.value1}+</p>:""}
       <input
         type="number"
         name="value3"
@@ -38,11 +38,11 @@ const Child2 = ({ inputValue }) => {
         onChange={handleNumber}
       />
       
-      {inputValue.value1 && child2Value.value3? <p>{Number(inputValue.value1) + Number(child2Value.value3)}</p> :""}
+      {inputValue.value1 && child2Value.value3? <p>={Number(inputValue.value1) + Number(child2Value.value3)}</p> :""}
 {/* second input start form here */}
 
 
-     {inputValue.value2 && inputValue.value1? <p>{inputValue.value2}</p>:""}
+     {inputValue.value2? <p>{inputValue.value2}+</p>:""}
       <input
         type="number"
         name="value4"
@@ -50,11 +50,11 @@ const Child2 = ({ inputValue }) => {
         id=""
         onChange={handleNumber}
       />
-      {inputValue.value2 && child2Value.value4 ?<p>{Number(inputValue.value2) + Number(child2Value.value4)}</p>:""}
+      { inputValue.value2 && child2Value.value4 ?<p>={Number(inputValue.value2) + Number(child2Value.value4)}</p>:""}
 
 
       {inputValue.value1 && inputValue.value2 ? (
-        <p>{Number(inputValue.value1) + Number(inputValue.value2)}</p>
+        <p>{Number(inputValue.value1) + Number(inputValue.value2)}+</p>
       ) : (
         ""
       )}
@@ -65,7 +65,7 @@ const Child2 = ({ inputValue }) => {
         id=""
         onChange={handleNumber}
       />
-      {inputValue.value1 && inputValue.value2 && child2Value.value5 ?<p>
+      {inputValue.value1 && inputValue.value2 && child2Value.value5 ?<p>=
         {Number(inputValue.value1) +
           Number(inputValue.value2) +
           Number(child2Value.value5)}
